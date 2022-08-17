@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="icon" type="image/png" sizes="16x16"  href="favicons/apple-touch-icon-180x180.png">
+		<link rel="stylesheet" type="text/css" href="css/estilo.css">
+
+		<script defer src="js/pokedex.js"></script>
+
+		<title>Pokédex</title>
+
+
+	</head>
+	<body>
+
+		<main>
+			
+			<img src="http://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/6.gif" alt="pokemon" class="pokemon_imagem">
+
+			<h1 class="pokemon__data">
+				<span class="pokemon__number"></span> - 
+				<span class="pokemon__name"></span>				
+			</h1>
+
+			<form class="form">
+				<input type="search"
+				class="input__search"
+				placeholder="Name or Number"
+				required
+				>
+			</form>
+
+			<div class="buttons">
+				<button class="button btn-prev">Prev &lt</button>
+				<button class="button">Informações do Pokemon</button>	
+				<button class="button btn-next">Next &gt</button>
+
+			</div>
+
+			<img src="imagem/pokedex.png" class="pokedex">
+
+		</main>
+
+	</body>
+</html>
