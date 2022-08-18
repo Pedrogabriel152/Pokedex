@@ -27,8 +27,41 @@ const renderPokemon = async (pokemon) => {
 
 	pokemonGif.src = `http://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${data.id}.gif`
 
-	pokemonId.innerHTML = data.order
+	pokemonId.innerHTML = data.id
+
+	console.log(data)
 
 }
 
-renderPokemon('6')
+function pesquisaPokemon()
+{
+
+	const valorCampo = document.querySelector('.input__search').value
+
+	console.log(valorCampo)
+	// renderPokemon(valorCampo.value)
+}
+
+const proximoPokemon = () => {
+	let valorId = parseInt(pokemonId.innerHTML) + 1
+
+	if(isNaN(valorId)){
+		valorId = 1
+	}
+	
+	renderPokemon(valorId)
+}
+
+const prevPokemon = () => {
+	let valorId = parseInt(pokemonId.innerHTML) - 1
+	
+	if(isNaN(valorId)){
+		valorId = 1
+	}
+	
+	if(valorId == 0){
+		valorId = 1
+	}
+
+	renderPokemon(valorId)
+}
